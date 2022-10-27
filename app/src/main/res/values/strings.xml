@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">RecyclerView</string>
+    <string name="affirmation1">C</string>
+    <string name="affirmation2">C++</string>
+    <string name="affirmation3">Java</string>
+    <string name="affirmation4">Net</string>
+    <string name="affirmation5">Kotlin</string>
+    <string name="affirmation6">Ruby</string>
+    <string name="affirmation7">Rails</string>
+    <string name="affirmation8">Python</string>
+    <string name="affirmation9">Java Script</string>
+    <string name="affirmation10">Php</string>
+    <string name="affirmation11">Ajax</string>
+    <string name="affirmation12">Perl</string>
+    <string name="affirmation13">Hadoop</string>
+</resources>
