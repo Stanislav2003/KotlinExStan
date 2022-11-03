@@ -2,8 +2,11 @@ package com.stanss.recyclerview
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -43,6 +46,22 @@ class MainActivity : AppCompatActivity() {
         // in content do not change the layout size of the RecyclerView
         recyclerView.setHasFixedSize(true)
 
+
+        var torna : Button = findViewById(R.id.botoTorna)
+
+        torna.setOnClickListener {
+
+            var escriuCategoria : EditText =  findViewById(R.id.escriuCat)
+            var categoryText = escriuCategoria.text.toString()
+
+            if(categoryText.isEmpty()){
+                categoryText= "categoria no seleccionada"
+            }
+            val intent = Intent(this, IntroduirDades::class.java)
+            intent.putExtra("categoriaDone",categoryText)
+            startActivity(intent)
+        }
+
     }
 
     override fun onResume() {
@@ -51,4 +70,6 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter
         recyclerView.adapter?.notifyDataSetChanged()
     }
+
+
 }
